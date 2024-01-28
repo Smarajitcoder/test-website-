@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smarajit Ghosh </title>
+    <link rel="website icon" type="png" href="/Logo & Icons/logo yt.png">
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+    margin: 10;
+    padding: 0;
+    
+}
+
+body {
+    background-image:url(/images/bg.jpg);
+}
+/* Nav bar */
+
+.container {
+    width: 100%;
+    min-height: 20vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 45px;
+    cursor: pointer;
+    margin-top: 12.5px;   
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+    margin-top: 12px;
+}
+
+nav {
+    flex: 2;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+@media only screen and (max-width: 1112px) {
+    nav ul {
+        width: 100%;
+        height: 100%;
+        background: black;
+        position: absolute;
+        top: 85px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menulist {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+}
+
+big {
+    font-size: 250%;
+    color: black;
+}
+
+small { 
+    font-size: 120%;
+    color:black;
+}
+
+main big {
+    font-size: 250%;
+    color: black;
+}
+
+table {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    border-color: rgb(2, 5, 172);
+}
+
+table, td, th {
+    padding: 1rem;
+    border-collapse: collapse;
+}
+
+main.table {
+    width: 100%;
+    height: 50%;
+    background-color: #fff5;
+    
+    backdrop-filter: blur(2px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.table_header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+}
+
+.table_body {
+    width: 95%;
+    max-height: calc(89% - .8rem);
+    background-color: #fffb;
+
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body:hover:-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr:hover {
+    background-color: #5CE8E9;
+}
+
+table thead tr th {
+    text-align: center;
+}
+
+table thead tr .home {
+    text-align:justify;
+}
+
+table thead tr .aboutme {
+    text-align:justify;
+}
+
+table thead tr .uploads {
+    text-align:justify;
+}
+
+table thead tr .aboutme big {
+    font-size: 150%;
+    color: black;
+}
+
+table thead tr .aboutimg {
+    width: 100%;
+    border-radius: .8rem;
+}
+
+.footercontainer {
+    max-width: 1170px;
+    
+    margin: auto;
+    margin-top: -50px;
+    align-content: center;
+}
+
+ul {
+    list-style: none;
+}
+.footer {
+    background-color: #24262b;
+    border-radius: 10px;
+    padding: 70px 0;
+
+}
+
+.footerrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footercol {
+    width: 22%;
+    padding: 0 12px;
+}
+
+.footercol h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footercol h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:#5CE8E9;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footercol ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footercol ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footercol ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footercol .sociallinks a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgba(255, 255, 255, 0.2);
+    margin: 0 20px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+} 
+
+.footercol .sociallinks a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 876px) {
+    .footercol {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+button {
+    width: 200px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #029991, #0226f1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    background: #01580d;
+}
+
+table thead tr .aboutbtn {
+    width: 150px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #029991, #0226f1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table thead tr .aboutbtn a {
+    text-decoration: none;
+    color: white;
+}
+
+table thead tr .aboutbtn:hover {
+    background: #01580d;
+}
+
+table thead tr .sociallinks a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgba(255, 255, 255, 0.2);
+    margin: 0 20px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+} 
+
+table thead tr .sociallinks a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <!-- Nav bar -->
+        <div class="container">
+            <div class="navbar">
+                <img src="/Logo & Icons/logo-yt.png" alt="Smarajit Ghosh" class="logo">
+                <nav>
+                    <ul id="menulist">
+                        <li><a href="/index.html"> Home </a></li>
+                        <li><a href="/Story.html"> Story </a></li>
+                        <li><a href="/Poetry.html"> Poetry </a></li>
+                        <li><a href="/Videos.html"> Videos </a></li>
+                        <li><a href="/Audios.html"> Audios </a></li>
+                        <li><a href="/Downloads.html"> Downloads </a></li>
+                        <li><a href="/Uploads.html"> Uploads </a></li>
+                        <li><a href="/About_me.html"> About Me </a></li>
+                        <li><a href="/ContactMe.html"> Contact Me </a></li>
+                    </ul>
+                </nav>
+                <img src="/Logo & Icons/menu.png" alt="Menu" class="menu-icon" onclick="togglemenu()">
+            </div>
+        
+        <!-- Navbar Script -->
+
+            <script>
+
+                var menulist = document.getElementById("menulist");
+        
+                menulist.style.maxHeight = "0px"
+        
+                function togglemenu() {
+                    
+                    if(menulist.style.maxHeight == "0px")
+                        {
+                            menulist.style.maxHeight = "280px"
+                        }
+                    
+                    else {
+                            menulist.style.maxHeight = "0px"
+                        }
+                }
+            </script>
+
+    </header>
+
+        <!-- Logo & Heading -->
+
+    <center> 
+
+        <!-- Top Logo -->
+        <img src="/Logo & Icons/logo yt.png" width="150px" height="150px">
+        <br>
+
+        <!-- Top Heading -->
+        <big> <B> Smarajit Ghosh </B> </big>
+        <br>
+        
+        <!-- Top Description -->
+        <small> <b>Poetry comes alive through Recitation</b> </small>
+        <br> <br>
+        
+    </center>
+
+    <hr>
+
+    <main class="table">
+
+        <!-- Main Table -->
+            <section class="table_header">
+                 <big> <center> <marquee> Welcome to my realm of Recitation </marquee> </center> </big> 
+            </section>
+            <section class="table_body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="home"> 
+                                <p> 
+                                আবৃত্তি হল বাংলার একটি অনেক পুরানো ঐতিহ্য, কিন্তু এই যান্ত্রিকতার যুগে কোথায় যেন বাংলার এই ঐতিহ্য মলিন হয়ে যাচ্ছে, আমরা কোথায় যেন হারিয়ে ফেলছি আমাদের এই শিল্পকে । এই একবিংশ শতাব্দি হল DIGITAL MEDIA এর যুগ তাই এই MEDIA র মাধ্যমেই যদি আমরা অর্থাৎ বাংলার সমস্ত আবৃত্তিপ্রেমীরা এক হতে পারি তাহলে বর্তমানে প্রায় অবহেলিত এই শিল্পের মধ্যে আবার প্রাণের সঞ্চার হবে ।
+                                <br> <br>
+                                তাই এই বিষয়কে মাথায় রেখে আমাদের এই ছোট্ট প্রচেষ্টা এই YOUTUBE CHANNEL এর মাধ্যমে ব্যক্ত করব ।।
+                                </p>  
+                            </th>  
+                            
+                        </tr>
+                    </thead>
+                    
+                </table>
+            </section>
+    </main>
+
+    <hr>
+
+    <footer class="footer">
+        <div class="footercontainer">
+            <div class="footerrow">
+                <div class="footercol">
+                    <h4> Popular Videos </h4>
+                    <ul>
+                        <li> <a href="https://youtu.be/9YnOb0DAnbI?si=nNZENccWUowWp4SE"> পঁচিশে বৈশাখের উদ্দেশ্যে </a> </li>
+                        <li> <a href="https://youtu.be/pqcHo91e0lA?si=iCKyLkCNgGc_O2bU"> পানপাত্র </a> </li>
+                        <li> <a href="https://youtu.be/1uao4Pt0DzE?si=yPU0-hj7bwr-f4mh"> পতাকা উত্তোলন </a> </li>
+                        <li> <a href="https://youtu.be/E4qrqfDmntU?si=jmeCmDu7JskBFvn0"> আদি Part - 1 </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footercol">
+                    <h4> Books </h4>
+                    <ul>
+                        <li> <a href="https://upload.wikimedia.org/wikipedia/commons/2/24/%E0%A6%B8%E0%A6%9E%E0%A7%8D%E0%A6%9A%E0%A6%AF%E0%A6%BC%E0%A6%BF%E0%A6%A4%E0%A6%BE-%E0%A6%B0%E0%A6%AC%E0%A7%80%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%A8%E0%A6%BE%E0%A6%A5_%E0%A6%A0%E0%A6%BE%E0%A6%95%E0%A7%81%E0%A6%B0.pdf"> সঞ্চয়িতা </a> </li>
+                        
+                        <li> <a href="https://bdebooks.com/books/sanchita-by-kazi-nazrul-islam/#read_online"> সঞ্চিতা </a> </li>
+
+                        <li> <a href="https://upload.wikimedia.org/wikisource/bn/b/bd/4990010059655_-_Gitabitan_%28Akhanda%291956%2C_Tagore%2C_Rabindranath%2C_1132p%2C_The_Arts%2C_bengali_%281956%29.pdf"> গীতবিতান </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footercol">
+                    <h4> Help </h4>
+                    <ul>
+                        <li> <a href="/ContactMe.html"> Contact Me </a> </li>
+                        <li> <a href="https://forms.gle/TB5uBUcDsm7Yahec9"> Upload related problem  </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footercol">
+                    <h4> Follow Me </h4>
+                    <div class="sociallinks">
+                        <a href="https://www.youtube.com/@recitersmarajitghosh/featured "> <i class="fab fa-youtube"> </i></a>
+                        <a href="https://www.facebook.com/recitersmarajitghosh "> <i class="fab fa-facebook-f"> </i></a>
+                        <a href="https://www.instagram.com/smarajitghosh2/ "> <i class="fab fa-instagram"> </i></a>
+                        <a href="https://twitter.com/smarajitg02 "> <i class="fab fa-twitter"> </i></a>
+                        <a href="https://www.linkedin.com/in/smarajit-ghosh-034174233/ "> <i class="fab fa-linkedin-in"> </i></a>
+                        <a href="https://whatsapp.com/channel/0029Va9L2p04inoircmzGw1s"> <i class="fab fa-whatsapp"> </i></a>
+                        <a href="https://discord.com/invite/MczSSdBj "> <i class="fab fa-discord"> </i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
